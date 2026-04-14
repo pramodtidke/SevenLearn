@@ -1,0 +1,132 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.animated-grid {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.09) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+  opacity: 0.65;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 220ms ease, background-color 220ms ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.32);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.info-card,
+.topic-card,
+.step-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 14px 28px rgba(2, 6, 23, 0.28);
+}
+
+.info-card,
+.topic-card {
+  padding: 1.4rem;
+  transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.info-card:hover,
+.topic-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(37, 99, 235, 0.6);
+  box-shadow: 0 20px 34px rgba(10, 15, 30, 0.5);
+}
+
+.icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(145deg, rgba(37, 99, 235, 0.22), rgba(249, 115, 22, 0.18));
+}
+
+.step-card {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.step-card span {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #f97316);
+  font-weight: 700;
+}
+
+.step-card h3 {
+  margin: 0.9rem 0 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.step-card p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

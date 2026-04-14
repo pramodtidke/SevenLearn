@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SevenLearn helps beginners learn AI and tech the simple way with practical lessons and real examples."
+    />
+    <meta name="theme-color" content="#0A0F1E" />
+    <title>sevenlearn | Learn AI & Tech the Simple Way</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandBlue: '#2563EB',
+              accentOrange: '#F97316',
+              bgDark: '#0A0F1E',
+              cardSurface: '#1E293B',
+              mutedText: '#94A3B8',
+              lightBg: '#F8FAFC'
+            },
+            boxShadow: {
+              glow: '0 10px 30px rgba(37, 99, 235, 0.25)',
+              card: '0 12px 30px rgba(15, 23, 42, 0.35)'
+            },
+            fontFamily: {
+              sans: ['Helvetica', 'Arial', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+            },
+            keyframes: {
+              gradientShift: {
+                '0%,100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' }
+              },
+              float: {
+                '0%,100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' }
+              },
+              pulseGlow: {
+                '0%,100%': { opacity: '0.55' },
+                '50%': { opacity: '0.9' }
+              }
+            },
+            animation: {
+              gradientShift: 'gradientShift 14s ease infinite',
+              floatSlow: 'float 7s ease-in-out infinite',
+              floatFast: 'float 4.5s ease-in-out infinite',
+              pulseGlow: 'pulseGlow 5s ease-in-out infinite'
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-bgDark text-white antialiased selection:bg-brandBlue/40">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:m-4 focus:rounded-md focus:bg-brandBlue focus:px-3 focus:py-2">Skip to content</a>
+
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-bgDark/80 backdrop-blur-lg">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Main navigation">
+        <a class="text-xl font-bold tracking-tight" href="#hero">seven<span class="text-brandBlue">learn</span></a>
+        <ul class="hidden gap-6 text-sm text-slate-300 md:flex">
+          <li><a class="transition hover:text-white" href="#topics">Topics</a></li>
+          <li><a class="transition hover:text-white" href="#how-it-works">How It Works</a></li>
+          <li><a class="transition hover:text-white" href="#cta">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="overflow-hidden">
+      <section id="hero" class="relative isolate min-h-screen px-6 pt-32">
+        <div class="animated-grid absolute inset-0 -z-20"></div>
+        <div class="absolute inset-0 -z-10 bg-[length:220%_220%] bg-gradient-to-br from-brandBlue/25 via-bgDark to-accentOrange/20 animate-gradientShift"></div>
+        <div class="pointer-events-none absolute -left-24 top-32 h-56 w-56 rounded-full bg-brandBlue/35 blur-3xl animate-pulseGlow"></div>
+        <div class="pointer-events-none absolute -right-16 bottom-24 h-64 w-64 rounded-full bg-accentOrange/25 blur-3xl animate-pulseGlow"></div>
+
+        <div class="mx-auto grid max-w-6xl items-center gap-14 py-16 lg:grid-cols-2">
+          <div data-reveal>
+            <p class="mb-4 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-slate-200">
+              Learn · Build · Teach
+            </p>
+            <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Learn AI &amp; Tech the Simple Way</h1>
+            <p class="mt-6 max-w-xl text-lg text-slate-300">
+              Simple explanations. Real examples. One concept at a time.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a href="#topics" class="btn-primary">Start Learning</a>
+              <a href="#value" class="btn-secondary">Explore Topics</a>
+            </div>
+          </div>
+
+          <div class="relative" data-reveal>
+            <div class="floating-card ml-auto max-w-sm rounded-2xl border border-white/10 bg-cardSurface/90 p-5 shadow-card animate-floatSlow">
+              <p class="text-sm text-mutedText">Now Learning</p>
+              <h2 class="mt-2 text-xl font-bold">AI Basics</h2>
+              <p class="mt-2 text-slate-300">Understand prompts, models, and practical AI use in plain language.</p>
+              <div class="mt-5 h-2 overflow-hidden rounded-full bg-slate-700">
+                <div class="h-full w-2/3 rounded-full bg-gradient-to-r from-brandBlue to-accentOrange"></div>
+              </div>
+            </div>
+            <div class="floating-card absolute -bottom-8 -left-4 w-56 rounded-2xl border border-white/10 bg-cardSurface/90 p-4 shadow-glow animate-floatFast">
+              <p class="text-sm text-mutedText">Weekly Goal</p>
+              <p class="mt-2 text-lg font-bold">Build 1 mini project</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="value" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="mb-10 text-center" data-reveal>
+          <h2 class="text-3xl font-bold">Why learners trust sevenlearn</h2>
+          <p class="mt-3 text-mutedText">A simple learning path that helps beginners make progress fast.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="info-card" data-reveal>
+            <div class="icon-wrap">👋</div>
+            <h3 class="mt-4 text-xl font-bold">Beginner Friendly</h3>
+            <p class="mt-3 text-slate-300">Clear lessons made for people starting from zero.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <div class="icon-wrap">🛠️</div>
+            <h3 class="mt-4 text-xl font-bold">Practical Learning</h3>
+            <p class="mt-3 text-slate-300">Learn by doing with focused examples and real use cases.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <div class="icon-wrap">📣</div>
+            <h3 class="mt-4 text-xl font-bold">Learn in Public</h3>
+            <p class="mt-3 text-slate-300">Share projects and grow your confidence as you teach others.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="topics" class="bg-white/[0.03] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="mb-10 text-center" data-reveal>
+            <h2 class="text-3xl font-bold">Courses &amp; Topics</h2>
+            <p class="mt-3 text-mutedText">Start with a topic, then build your portfolio step by step.</p>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="topic-card" data-reveal>
+              <h3 class="text-xl font-bold">Python</h3>
+              <p class="mt-2 text-sm text-slate-300">Write clean code and automate repetitive tasks.</p>
+              <button class="mt-6 rounded-lg bg-brandBlue px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-blue-500">Start</button>
+            </article>
+            <article class="topic-card" data-reveal>
+              <h3 class="text-xl font-bold">AI Basics</h3>
+              <p class="mt-2 text-sm text-slate-300">Understand AI models, prompting, and everyday workflows.</p>
+              <button class="mt-6 rounded-lg bg-brandBlue px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-blue-500">Start</button>
+            </article>
+            <article class="topic-card" data-reveal>
+              <h3 class="text-xl font-bold">Web Development</h3>
+              <p class="mt-2 text-sm text-slate-300">Build fast, modern web apps with clean interfaces.</p>
+              <button class="mt-6 rounded-lg bg-brandBlue px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-blue-500">Start</button>
+            </article>
+            <article class="topic-card" data-reveal>
+              <h3 class="text-xl font-bold">Automation</h3>
+              <p class="mt-2 text-sm text-slate-300">Create workflows that save time and reduce manual work.</p>
+              <button class="mt-6 rounded-lg bg-brandBlue px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-blue-500">Start</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="mb-14 text-center" data-reveal>
+          <h2 class="text-3xl font-bold">How it works</h2>
+          <p class="mt-3 text-mutedText">A repeatable system to keep learning simple and useful.</p>
+        </div>
+        <ol class="grid gap-6 md:grid-cols-3">
+          <li class="step-card" data-reveal><span>1</span><h3>Learn</h3><p>Understand one clear concept with guided content.</p></li>
+          <li class="step-card" data-reveal><span>2</span><h3>Build</h3><p>Apply it instantly by creating a mini project.</p></li>
+          <li class="step-card" data-reveal><span>3</span><h3>Teach</h3><p>Share what you built and reinforce your understanding.</p></li>
+        </ol>
+      </section>
+
+      <section class="bg-white/[0.03] py-24">
+        <div class="mx-auto max-w-6xl px-6" data-reveal>
+          <h2 class="mb-8 text-center text-3xl font-bold">See code, not confusion</h2>
+          <div class="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-white/10 bg-[#0c162d] shadow-card">
+            <div class="flex items-center gap-2 border-b border-white/10 bg-black/20 px-4 py-3">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+              <span class="h-3 w-3 rounded-full bg-green-400"></span>
+              <p class="ml-3 text-xs uppercase tracking-wide text-mutedText">Terminal</p>
+            </div>
+            <pre class="p-6 font-mono text-sm leading-relaxed text-blue-100"><code>print("Hello, SevenLearn!")
+
+for lesson in ["Learn", "Build", "Teach"]:
+    print(f"Next step: {lesson}")</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="mx-auto max-w-5xl px-6 py-24 text-center">
+        <div class="rounded-3xl border border-white/10 bg-gradient-to-r from-brandBlue/20 to-accentOrange/20 px-8 py-16 shadow-glow" data-reveal>
+          <h2 class="text-3xl font-bold sm:text-4xl">Start Your AI Journey Today</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-slate-200">
+            Join a beginner-friendly platform that helps you grow your skills with clarity and confidence.
+          </p>
+          <a href="#hero" class="btn-primary mt-8 inline-flex">Join SevenLearn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 px-6 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-mutedText md:flex-row">
+        <p>© <span id="year"></span> sevenlearn</p>
+        <div class="flex gap-4">
+          <a href="#" class="transition hover:text-white">X</a>
+          <a href="#" class="transition hover:text-white">LinkedIn</a>
+          <a href="#" class="transition hover:text-white">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
